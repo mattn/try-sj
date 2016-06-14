@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<script src="sj.js/dist/sj.bundle.js"></script>
+<body>
+
+<div sj-app="">
+ 
+<p>Input something in the input box:</p>
+<p>Name : <input type="text" sj-model="this.name" sj-keyup="this.name=$event.target.value;this.update()" placeholder="Enter name here"></p>
+<h1>Hello {{this.name}}</h1>
+
+</div>
+
+<script>
+</script>
+</body>
+</html>
