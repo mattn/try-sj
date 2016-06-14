@@ -6,10 +6,11 @@
 <div sj-app="">
  
 <p>Input something in the input box:</p>
-<p>Name: <input type="text" sj-model="this.name" sj-keyup="this.name=$event.target.value;this.update()"></p>
+<p>Name: <input type="text" sj-model="this.name" sj-input="this.update()"></p>
 <p>{{this.name}}</p>
 
 </div>
 
+<script src="sj-app.js"></script>
 </body>
 </html>
