@@ -5,14 +5,14 @@
 var count = 0;
 function myFunction(e) {
     count++;
-    document.querySelector('[sj-app]').update();
+    e.update();
 }
 </script>
 <body>
 
 <div sj-app="myApp">
 
-<button sj-click="myFunction($event)">Click Me!</button>
+<button sj-click="myFunction(this)">Click Me!</button>
 
 <p>{{ count }}</p>
 
