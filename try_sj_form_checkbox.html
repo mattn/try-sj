@@ -2,37 +2,25 @@
 <html>
 <script src="sj.js/dist/sj.bundle.js"></script>
 <link rel="stylesheet" href="style.css" media="all">
-<script>
-var myVar = false;
-</script>
 <body>
 
 <div sj-app="">
   <form>
     Check to show a header:
-    <input type="checkbox" sj-model="myVar">
+    <input type="checkbox" sj-model="this.myVar">
   </form>
-  <h1 sj-if="myVar">My Header</h1>
+  <h1 sj-if="this.myVar">My Header</h1>
 </div>
 
 <p>The header's sj-if attribute is set to true when the checkbox is checked.</p>
 
-<pre><code>&lt;script&gt;
-var myVar = false;
-&lt;/script&gt;
-&lt;body&gt;
-
-&lt;div sj-app=""&gt;
+<pre><code>&lt;div sj-app=""&gt;
   &lt;form&gt;
     Check to show a header:
-    &lt;input type="checkbox" sj-model="myVar"&gt;
+    &lt;input type="checkbox" sj-model="this.myVar"&gt;
   &lt;/form&gt;
-  &lt;h1 sj-if="myVar"&gt;My Header&lt;/h1&gt;
+  &lt;h1 sj-if="this.myVar"&gt;My Header&lt;/h1&gt;
 &lt;/div&gt;
-
-&lt;p&gt;The header's sj-if attribute is set to true when the checkbox is checked.&lt;/p&gt;
-
-&lt;/body&gt;
 </code></pre>
 </body>
 </html>
