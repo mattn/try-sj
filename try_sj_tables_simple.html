@@ -4,20 +4,23 @@
 <script>
 var names = [];
 </script>
+<style>
+.mytable { border-collapse: collapse; }
+.mytable td { border: 1px solid black; }
+</style>
 <body>
 
-<div sj-app="myApp">
+<div sj-app="">
 
-<table>
+<table class="mytable">
   <tr sj-repeat="x in names">
-    <td>{{ x.Name }}</td>
-    <td>{{ x.Country }}</td>
+    <td sj-bind="x.Name"></td>
+    <td sj-bind="x.Country"></td>
   </tr>
 </table>
 
 </div>
 
-<script src="sj-app.js"></script>
 <script>
 window.addEventListener("DOMContentLoaded", () => {
   fetch('customer.json')

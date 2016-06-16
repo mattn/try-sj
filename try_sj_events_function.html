@@ -2,22 +2,23 @@
 <html>
 <script src="sj.js/dist/sj.bundle.js"></script>
 <script>
-var count = 0;
-function myFunction(e) {
-    count++;
-    e.update();
+function CounterApp() {
+  this.counter = 0;
+  this.count = function() {
+    this.counter++;
+    this.update();
+  }
 }
 </script>
 <body>
 
-<div sj-app="myApp">
+<div sj-app="CounterApp">
 
-<button sj-click="myFunction(this)">Click Me!</button>
+<button sj-click="this.count()">Click Me!</button>
 
-<p>{{ count }}</p>
+<p sj-bind="this.counter"></p>
 
 </div>
 
-<script src="sj-app.js"></script>
 </body>
 </html>
