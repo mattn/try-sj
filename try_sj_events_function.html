@@ -2,6 +2,8 @@
 <html>
 <script src="sj.js/dist/sj.bundle.js"></script>
 <link rel="stylesheet" href="style.css" media="all">
+<body>
+
 <script>
 function CounterApp() {
   this.counter = 0;
@@ -11,14 +13,10 @@ function CounterApp() {
   }
 }
 </script>
-<body>
 
 <div sj-app="CounterApp">
-
 <button sj-click="this.count()">Click Me!</button>
-
 <p sj-bind="this.counter"></p>
-
 </div>
 
 <pre><code>&lt;script&gt;
@@ -30,17 +28,11 @@ function CounterApp() {
   }
 }
 &lt;/script&gt;
-&lt;body&gt;
 
 &lt;div sj-app="CounterApp"&gt;
-
 &lt;button sj-click="this.count()"&gt;Click Me!&lt;/button&gt;
-
 &lt;p sj-bind="this.counter"&gt;&lt;/p&gt;
-
 &lt;/div&gt;
-
-&lt;/body&gt;
 </code></pre>
 
 </body>
