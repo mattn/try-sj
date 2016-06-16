@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <script src="sj.js/dist/sj.bundle.js"></script>
+<link rel="stylesheet" href="style.css" media="all">
 <script>
 var names=[
 {name:'Jani',country:'Norway'},
@@ -19,5 +20,25 @@ var names=[
 
 </div>
 
+<pre><code>&lt;script&gt;
+var names=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]
+&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div sj-app=""&gt;
+
+&lt;p&gt;Looping with objects:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li sj-repeat="x in names"&gt;
+  &lt;span sj-bind="x.name + ', ' + x.country"&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;/body&gt;
+</code></pre>
 </body>
 </html>

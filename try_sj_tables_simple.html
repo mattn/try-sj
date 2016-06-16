@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <script src="sj.js/dist/sj.bundle.js"></script>
+<link rel="stylesheet" href="style.css" media="all">
 <script>
 var names = [];
 </script>
@@ -33,5 +34,28 @@ window.addEventListener("DOMContentLoaded", () => {
 }, false);
 </script>
 
+<pre><code>&lt;div sj-app=""&gt;
+
+&lt;table class="mytable"&gt;
+  &lt;tr sj-repeat="x in names"&gt;
+    &lt;td sj-bind="x.Name"&gt;&lt;/td&gt;
+    &lt;td sj-bind="x.Country"&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+window.addEventListener("DOMContentLoaded", () =&gt; {
+  fetch('customer.json')
+  .then((response) =&gt; {
+    return response.json()
+  }).then((json) =&gt; {
+    window.names = json.records;
+    document.querySelector('[sj-app]').update();
+  });
+}, false);
+&lt;/script&gt;
+</code></pre>
 </body>
 </html>
