@@ -8,11 +8,11 @@
  
 <p>Select color name:</p>
 <select name="color" sj-model="this.color">
-    <option value="background-color: blue">Blue</option>
-    <option value="background-color: red">Red</option>
-    <option value="background-color: yellow">Yellow</option>
+    <option value="blue">Blue</option>
+    <option value="red">Red</option>
+    <option value="yellow">Yellow</option>
 </select>
-<h1 sj-bind="this.color" sj-style="this.color"></h1>
+<h1 sj-bind="this.color" sj-style="{'background-color': this.color}"></h1>
 
 </div>
 
