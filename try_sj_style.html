@@ -20,11 +20,11 @@
  
 &lt;p&gt;Select color name:&lt;/p&gt;
 &lt;select name="color" sj-model="this.color"&gt;
-    &lt;option value="background-color: blue"&gt;Blue&lt;/option&gt;
-    &lt;option value="background-color: red"&gt;Red&lt;/option&gt;
-    &lt;option value="background-color: yellow"&gt;Yellow&lt;/option&gt;
+    &lt;option value="blue"&gt;Blue&lt;/option&gt;
+    &lt;option value="red"&gt;Red&lt;/option&gt;
+    &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
 &lt;/select&gt;
-&lt;h1 sj-bind="this.color" sj-style="this.color"&gt;&lt;/h1&gt;
+&lt;h1 sj-bind="this.color" sj-style="{'background-color': this.color}"&gt;&lt;/h1&gt;
 
 &lt;/div&gt;
 </code></pre>
