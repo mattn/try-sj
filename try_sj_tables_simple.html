@@ -46,11 +46,11 @@ window.addEventListener("DOMContentLoaded", function() {
 &lt;/div&gt;
 
 &lt;script&gt;
-window.addEventListener("DOMContentLoaded", () =&gt; {
+window.addEventListener("DOMContentLoaded", function() {
   fetch('customer.json')
-  .then((response) =&gt; {
+  .then(function(response) {
     return response.json()
-  }).then((json) =&gt; {
+  }).then(function(json) {
     window.names = json.records;
     document.querySelector('[sj-app]').update();
   });
